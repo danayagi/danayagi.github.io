@@ -1,0 +1,4 @@
+title: test
+theme: minima
+plugins:
+  - jekyll-seo-tag
