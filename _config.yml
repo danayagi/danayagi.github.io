@@ -1,4 +1,12 @@
-title: test
+title: title
+description: >- # ここに説明文
+  テスト
+
+url: "https://danayagi.github.io" # 自分のURLに変えてください
+baseurl: "" # ルートドメインなら空文字でOK
+
 theme: minima
+
+timezone: Asia/Tokyo
 plugins:
   - jekyll-seo-tag
