@@ -1,7 +1,8 @@
 <header class="site-header" role="banner">
 
     <div class="wrapper">
-        <a class="site-title" rel="author" href="{{ " /" | relative_url }}">{{ site.title | escape }}</a>
+        <!-- タイトルリンクを絶対パス(/)に変更して修正 -->
+        <a class="site-title" rel="author" href="/">{{ site.title | escape }}</a>
 
         <nav class="site-nav">
             <div class="trigger">
@@ -16,11 +17,13 @@
                 {% endfor %}
                 {% endif %}
 
-                <!-- 言語切り替え表示: 日本語 / English -->
+                <!-- 言語切り替え表示: 日本語 / English
+             style="margin-right: 0" 等でテーマのデフォルトマージンを打ち消して空白を調整 -->
                 {% if page.url contains '/en/' %}
                 <!-- 現在英語ページの場合 -->
-                <a class="page-link" href="{{ alt_lang_post.url | default: '/' | relative_url }}">日本語</a>
-                /
+                <a class="page-link" style="margin-right: 0;"
+                    href="{{ alt_lang_post.url | default: '/' | relative_url }}">日本語</a>
+                &nbsp;/&nbsp;
                 <b>English</b>
                 {% else %}
                 <!-- 現在日本語ページの場合 -->
