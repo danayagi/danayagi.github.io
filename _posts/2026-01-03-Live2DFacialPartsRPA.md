@@ -218,6 +218,11 @@ key: 2026-01-03-Live2DFacialPartsRPA
     ```
 
     <br>
+    {: .caption-text }
+    ▼ChatGPT（API）に渡すスクリーンショットの例。これもpythonで撮影と送信を行う。<br>
+    ![スクリーンショット](/assets/img/20260103/4-1_ss.png){: .figure-image }
+
+    <br>
     ▼生成されるjsonデータの例
 
     ```json
