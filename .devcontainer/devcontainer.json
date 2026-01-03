@@ -1,0 +1,20 @@
+{
+    "name": "Jekyll",
+    // Microsoft公式のRuby環境イメージを使います
+    "image": "mcr.microsoft.com/devcontainers/ruby:3-bullseye",
+    
+    // サーバーのポート(4000)をローカルに転送する設定
+    "forwardPorts": [4000],
+  
+    // コンテナ作成後に自動でJekyllをインストールするコマンド
+    "postCreateCommand": "gem install jekyll bundler",
+  
+    "customizations": {
+      "vscode": {
+        // 便利な拡張機能を自動で入れる設定（任意）
+        "extensions": [
+          "shimoju.jekyll" 
+        ]
+      }
+    }
+  }

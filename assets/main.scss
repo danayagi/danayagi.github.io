@@ -1,0 +1,124 @@
+---
+---
+@import "minima";
+
+/** ここから下がカスタマイズ設定 **/
+
+/* 全体の文字の行間を少し広げる (デフォルトは1.5くらい) */
+body {
+  line-height: 1.75; 
+}
+
+/* 箇条書き（リスト）の項目ごとの隙間を広げる */
+li {
+  margin-bottom: 1.2em;
+}
+
+/* ネストされた（2階層目以降の）リストの間隔は狭くする */
+li li {
+    margin-bottom: 0.2em; /* お好みで調整してください */
+}
+
+/* 「先頭が太字」のリスト項目だけ、上側に余白を入れる */
+li:has(> strong:first-child) {
+    margin-top: 0.2em; /* 見出しっぽく使うなら広めに */
+    margin-bottom: 1.4em; /* 下は少し詰めるなど */
+}
+
+/* ネストされた（3階層目以降の）リストの間隔は狭くする */
+li li li {
+    margin-top: 0.5em; /* お好みで調整してください */
+}
+
+/* 見出しの上の余白を広げてセクション区切りを明確にする */
+h2, h4 {
+  margin-top: 2.5em;
+  margin-bottom: 1em;
+}
+
+h3 {
+  margin-top: 4em;
+  margin-bottom: 1em;
+}
+
+/* 記事内の段落ごとの余白も少し広めに */
+p {
+  margin-bottom: 0.9em;
+}
+
+/* 画像用の独自スタイル */
+.figure-image {
+    margin-top: 0.1em;
+    margin-bottom: 2.5em; /* 画像の下に広めの余白 */
+}
+
+/* .figure-image と一緒に使うサイズ調整クラス */
+.figure-image.small {
+    width: 400px;
+}
+
+/* キャプション用テキスト（上に余白を追加） */
+.caption-text {
+    margin-top: 2.5em; /* 上を広げる */
+}
+
+
+/* コードブロック内の文字サイズを小さくする */
+.highlighter-rouge .highlight {
+    font-size: 0.95em; /* 元のサイズの95%にする */
+
+    /* 背景色を薄いグレーに変更（元の #eef を上書き） */
+    background-color: #f9f9f9;
+    /* 必要なら枠線も少し調整 */
+    border: 1px solid #e0e0e0;
+}
+
+/* ② 中にある code タグの背景色を透明にして縞々を防ぐ */
+.highlighter-rouge .highlight code, pre.highlight code {
+    background-color: transparent;
+    border: none; /* codeタグ自体の枠線も消す */
+}
+
+/* インラインコード（文中の `code`）は区別のために色を残す */
+p > code, li > code {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    padding: 2px 4px;
+}
+  
+/* インラインコード（`code`）も小さくしたい場合はこちら */
+code {
+    font-size: 0.95em;
+}
+
+/* コードハイライトの太字を解除する */
+.highlight .k, 
+.highlight .kd, 
+.highlight .kn, 
+.highlight .kp, 
+.highlight .kr, 
+.highlight .kt, 
+.highlight .nc, 
+.highlight .nf, 
+.highlight .na, 
+.highlight .nt {
+  font-weight: normal;
+}
+
+
+
+/* 記事一覧ページ（トップページなど）での表示崩れを修正 */
+.post-list h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.2em; /* 必要に応じてサイズも調整 */
+}
+  
+.post-list li {
+    margin-bottom: 1em; /* 一覧でのリスト間隔を適切な広さに戻す */
+}
+  
+/* 一覧ページの日付部分の調整 */
+.post-meta {
+    margin-bottom: 0;
+}
