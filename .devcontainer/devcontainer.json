@@ -1,13 +1,14 @@
 {
     "name": "Jekyll",
     // Microsoft公式のRuby環境イメージを使います
-    "image": "mcr.microsoft.com/devcontainers/ruby:3-bullseye",
+    // Debian 11 bullseye は 2026-08-31 に LTS 終了。Ruby 3.4 の bookworm に寄せる
+    "image": "mcr.microsoft.com/devcontainers/ruby:3.4-bookworm",
     
     // サーバーのポート(4000)をローカルに転送する設定
     "forwardPorts": [4000],
   
     // コンテナ作成後に自動でJekyllをインストールするコマンド
-    "postCreateCommand": "gem install jekyll bundler",
+    "postCreateCommand": "gem install bundler && bundle install",
   
     "customizations": {
       "vscode": {
